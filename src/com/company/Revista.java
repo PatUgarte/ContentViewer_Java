@@ -2,58 +2,23 @@ package com.company;
 
 import java.util.Date;
 
-public class Revista {
+public class Revista extends Publicacion {
 
     //ATRIBUTOS
-    private int id;
-    private String titulo;
-    private Date fechaEdicion;
-    private String editorial;
-    private String genero;
+    private String tematica;
 
-    public Revista(String titulo, Date fechaEdicion, String editorial) {
-        this.titulo = titulo;
-        this.fechaEdicion = fechaEdicion;
-        this.editorial = editorial;
+    //CONSTRUCTORES
+    public Revista(String titulo, Date fechaEdicion, String editorial, String tematica) {
+        super(titulo, fechaEdicion, editorial);
+        this.tematica = tematica;
     }
 
-    public int getId() {
-        return id;
+    //METODOS
+    public String getTematica() {
+        return tematica;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Date getFechaEdicion() {
-        return fechaEdicion;
-    }
-
-    public void setFechaEdicion(Date fechaEdicion) {
-        this.fechaEdicion = fechaEdicion;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setTematica(String tematica) {
+        this.tematica = tematica;
     }
 }

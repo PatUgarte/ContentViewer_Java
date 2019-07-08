@@ -2,47 +2,18 @@ package com.company;
 
 import java.util.Date;
 
-public class Libro {
+public class Libro extends Publicacion{
 
     //ATRIBUTOS
-    private int id;
-    private String titulo;
-    private Date fechaEdicion;
-    private String editorial;
     private String[] autores;
 
-    public int getId() {
-        return id;
+    //CONSTUCTORES
+    public Libro(String titulo, Date fechaEdicion, String editorial, String[] autores) {
+        super(titulo, fechaEdicion, editorial);
+        this.autores = autores;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Date getFechaEdicion() {
-        return fechaEdicion;
-    }
-
-    public void setFechaEdicion(Date fechaEdicion) {
-        this.fechaEdicion = fechaEdicion;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
-    }
-
+    //METODOS
     public String[] getAutores() {
         return autores;
     }

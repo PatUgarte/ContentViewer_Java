@@ -6,8 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        Pelicula pelicula = new Pelicula("Coco", "Animación", (short) 2017);
-        pelicula.mostrarInformacion();
+
         mostrarMenu();
     }
 

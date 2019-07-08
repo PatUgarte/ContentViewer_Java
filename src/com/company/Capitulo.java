@@ -12,6 +12,7 @@ public class Capitulo {
     int tiempoVisto;
     byte numeroTemporada;
 
+
     public Capitulo(String titulo, int duracion, short anio) {
         this.titulo = titulo;
         this.duracion = duracion;
