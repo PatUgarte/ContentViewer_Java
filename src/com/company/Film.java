@@ -19,11 +19,10 @@ public class Film {
     }
 
     //METODOS
-    public void mostrarInformacion(){
-        System.out.println("Título: " + titulo);
-        System.out.println("Género: " + genero);
-        System.out.println("Año: " + anio);
 
+
+    public int getId() {
+        return id;
     }
 
     public String getTitulo(){
@@ -32,14 +31,6 @@ public class Film {
 
     public void setTitulo(String titulo){
         this.titulo = titulo;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getGenero() {
@@ -74,7 +65,7 @@ public class Film {
         this.anio = anio;
     }
 
-    public boolean isVista() {
+    public boolean getVista() {
         return vista;
     }
 
@@ -82,5 +73,14 @@ public class Film {
         this.vista = vista;
     }
 
-
+    @Override
+    public String toString() {
+        return "\tID: " + id +
+                "\n\tGÉNERO: " + genero +
+                "\n\tTÍTULO: " + titulo +
+                "\n\tCREADOR: " + creador +
+                "\n\tDURACIÓN: " + duracion +
+                "\n\tAÑO: " + anio +
+                "\n\t¿VISTA?: " + vista;
+    }
 }

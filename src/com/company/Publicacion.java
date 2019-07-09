@@ -9,21 +9,19 @@ public class Publicacion {
     private String titulo;
     private Date fechaEdicion;
     private String editorial;
+    private Boolean leido;
 
     //CONSTRUCTORES
     public Publicacion(String titulo, Date fechaEdicion, String editorial) {
         this.titulo = titulo;
         this.fechaEdicion = fechaEdicion;
         this.editorial = editorial;
+        this.leido = false;
     }
 
     //METODOS
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTitulo() {
@@ -48,5 +46,21 @@ public class Publicacion {
 
     public void setEditorial(String editorial) {
         this.editorial = editorial;
+    }
+
+    public Boolean getLeido() {
+        return leido;
+    }
+
+    public void setLeido(Boolean leido) {
+        this.leido = leido;
+    }
+
+    @Override
+    public String toString() {
+        return "\tID: " + id +
+                "\n\tTÍTULO: " + titulo +
+                "\n\tFECHA DE EDICIÓN: " + fechaEdicion +
+                "\n\tEDITORIAL: " + editorial;
     }
 }

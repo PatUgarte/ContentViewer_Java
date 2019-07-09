@@ -1,12 +1,14 @@
 package com.company;
 
+import java.util.List;
+
 public class Serie extends Film {
 
     //ATRIBUTOS
     private int tiempoVisto;
     private byte cantidadTemporadas;
-    private short cantidadCapitulos;
-    private Capitulo[] listaCapitulos;
+//    private short cantidadCapitulos;
+    private List<Capitulo> listaCapitulos;
 
     //CONSTRUCTORES
     public Serie(String titulo, String genero, String creador, int duracion, byte cantidadTemporadas) {
@@ -39,19 +41,16 @@ public class Serie extends Film {
         this.cantidadTemporadas = cantidadTemporadas;
     }
 
-    public short getCantidadCapitulos() {
-        return cantidadCapitulos;
-    }
-
-    public void setCantidadCapitulos(short cantidadCapitulos) {
-        this.cantidadCapitulos = cantidadCapitulos;
-    }
-
-    public Capitulo[] getListaCapitulos() {
+    public List<Capitulo> getListaCapitulos() {
         return listaCapitulos;
     }
 
-    public void setListaCapitulos(Capitulo[] listaCapitulos) {
+    public void setListaCapitulos(List<Capitulo> listaCapitulos) {
         this.listaCapitulos = listaCapitulos;
+    }
+
+    @Override
+    public String toString() {
+        return " ::: SERIE :::\n" + super.toString();
     }
 }

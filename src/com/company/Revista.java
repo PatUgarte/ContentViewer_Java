@@ -21,4 +21,9 @@ public class Revista extends Publicacion {
     public void setTematica(String tematica) {
         this.tematica = tematica;
     }
+
+    @Override
+    public String toString() {
+        return " ::: REVISTA :::\n" + super.toString() + "TEMATICA: " + tematica + "\n";
+    }
 }
