@@ -16,8 +16,6 @@ public class Main {
 
         mostrarMenu();
 
-        int enteros[] = new int[];
-
     }
 
 
