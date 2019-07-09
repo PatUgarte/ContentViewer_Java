@@ -1,0 +1,10 @@
+Informe confeccionado el 09-07-2019 02:29:10
+
+ ::: PELÍCULA :::
+	ID: 0
+	GÉNERO: Genero1
+	TÍTULO: Peli1
+	CREADOR: Creador1
+	DURACIÓN: 130
+	AÑO: 2015
+	¿VISTA?: true

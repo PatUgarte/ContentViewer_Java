@@ -1,15 +1,22 @@
 package com.company;
 
+import com.patugarte.Report;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
 
+    private static ArrayList<Pelicula> peliculas;
+
     public static void main(String[] args) {
         // write your code here
 
         mostrarMenu();
+
+        int enteros[] = new int[];
 
     }
 
@@ -54,7 +61,7 @@ public class Main {
                     hacerReporte();
                     break;
                 case 6:
-                    hacerReporte(new Date(eleccion));
+                    hacerReporte(new Date());
                     break;
                 default:
                     System.out.println("\nPor favor seleccione una opción válida.\n");
@@ -67,7 +74,7 @@ public class Main {
     }
 
     public static void mostrarPeliculas() {
-        ArrayList<Pelicula> peliculas = Pelicula.dameListaPeliculas();
+        peliculas = Pelicula.dameListaPeliculas();
         int exit = 0;
         do {
             System.out.println("\n :: PELÍCULAS :: \n");
@@ -150,11 +157,37 @@ public class Main {
     }
 
     public static void hacerReporte(){
+        Report report = new Report();
 
+        report.setTitulo(" :: REPORTE :: ");
+        report.setNombreArchivo("informe_de_visualizacion");
+        report.setExtension("txt");
+        String contenido = "";
+        for (Pelicula pelicula : peliculas) {
+            if(pelicula.getVista()){
+                contenido += pelicula.toString();
+            }
+        }
+        report.setContenido(contenido);
+        report.hacerReporte();
     }
 
     public static void hacerReporte(Date fechaDelDia){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+        String fechaConFormato = simpleDateFormat.format(fechaDelDia);
 
+        Report report = new Report();
+        report.setTitulo(" :: REPORTE :: ");
+        report.setNombreArchivo("informe_con_fecha");
+        report.setExtension("txt");
+        String contenido = "Informe confeccionado el " + fechaConFormato + "\n";
+        for (Pelicula pelicula : peliculas) {
+            if(pelicula.getVista()){
+                contenido += pelicula.toString();
+            }
+        }
+        report.setContenido(contenido);
+        report.hacerReporte();
     }
 
 }

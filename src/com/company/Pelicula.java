@@ -26,7 +26,7 @@ public class Pelicula extends Film
 
     @Override
     public String toString() {
-        return " ::: PELÍCULA :::\n" + super.toString() + "\n";
+        return "\n ::: PELÍCULA :::\n" + super.toString() + "\n";
     }
 
     @Override

@@ -1,0 +1,27 @@
+
+ ::: PELÍCULA :::
+	ID: 0
+	GÉNERO: Genero1
+	TÍTULO: Peli1
+	CREADOR: Creador1
+	DURACIÓN: 130
+	AÑO: 2015
+	¿VISTA?: true
+
+ ::: PELÍCULA :::
+	ID: 0
+	GÉNERO: Genero3
+	TÍTULO: Peli3
+	CREADOR: Creador3
+	DURACIÓN: 150
+	AÑO: 2017
+	¿VISTA?: true
+
+ ::: PELÍCULA :::
+	ID: 0
+	GÉNERO: Genero5
+	TÍTULO: Peli5
+	CREADOR: Creador5
+	DURACIÓN: 170
+	AÑO: 2019
+	¿VISTA?: true
